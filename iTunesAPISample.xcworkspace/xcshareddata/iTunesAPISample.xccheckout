@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F889400-6A0E-4944-88D7-01BDFEC71C50</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iTunesAPISample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB30A26F8BA461ACBD5FF8BDA1F99AA225D4EB8D</key>
+		<string>github.com:SuzukiYuka/iTunesAPISample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iTunesAPISample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB30A26F8BA461ACBD5FF8BDA1F99AA225D4EB8D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:SuzukiYuka/iTunesAPISample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB30A26F8BA461ACBD5FF8BDA1F99AA225D4EB8D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB30A26F8BA461ACBD5FF8BDA1F99AA225D4EB8D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iTunesAPISample</string>
+		</dict>
+	</array>
+</dict>
+</plist>

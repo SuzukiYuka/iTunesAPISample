@@ -7,7 +7,21 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class DetailViewController: AVPlayerViewController {
-   
+    var trackName: String!
+    var previewUrl: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = trackName
+        
+        if let previewUrl = previewUrl {
+            player = AVPlayer(URL: NSURL(string: previewUrl))
+            player.play()
+        }
+    }
 }

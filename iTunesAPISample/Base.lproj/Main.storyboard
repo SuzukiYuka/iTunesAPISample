@@ -1,25 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zWL-p1-WFN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Root View Controller-->
+        <scene sceneID="h1W-sO-b9a">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <tableViewController id="Mtx-O7-Sqc" customClass="ListViewController" customModule="iTunesAPISample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yyA-aT-DWN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="tsa-Pa-hQ1">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Mtx-O7-Sqc" id="FrP-0l-o0B"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6I7-Lg-HMb" customClass="ListCell" customModule="iTunesAPISample" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6I7-Lg-HMb" id="M9x-IW-XBS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="42p-Je-dCa">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="hjT-HA-dgT"/>
+                                                <constraint firstAttribute="width" constant="44" id="kJg-ms-gV3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p38-cn-GoU">
+                                            <rect key="frame" x="52" y="2" width="539" height="21"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT4-Og-GQ0">
+                                            <rect key="frame" x="52" y="22" width="539" height="20"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hT4-Og-GQ0" firstAttribute="leading" secondItem="42p-Je-dCa" secondAttribute="trailing" constant="8" symbolic="YES" id="BOS-oy-F08"/>
+                                        <constraint firstItem="hT4-Og-GQ0" firstAttribute="trailing" secondItem="p38-cn-GoU" secondAttribute="trailing" id="CXT-fe-EJT"/>
+                                        <constraint firstItem="42p-Je-dCa" firstAttribute="top" secondItem="M9x-IW-XBS" secondAttribute="top" id="DVp-gP-Onp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p38-cn-GoU" secondAttribute="bottom" constant="12.5" id="Hbd-9o-hsK"/>
+                                        <constraint firstItem="p38-cn-GoU" firstAttribute="top" secondItem="M9x-IW-XBS" secondAttribute="topMargin" constant="-6" id="Njq-ue-wc6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hT4-Og-GQ0" secondAttribute="bottom" constant="-6.5" id="fjs-mp-RTk"/>
+                                        <constraint firstItem="42p-Je-dCa" firstAttribute="leading" secondItem="M9x-IW-XBS" secondAttribute="leading" id="gHv-Zx-YZr"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="hT4-Og-GQ0" secondAttribute="trailing" constant="1" id="qPK-C4-iVa"/>
+                                        <constraint firstItem="p38-cn-GoU" firstAttribute="leading" secondItem="42p-Je-dCa" secondAttribute="trailing" constant="8" symbolic="YES" id="t5V-xa-Bqz"/>
+                                        <constraint firstItem="hT4-Og-GQ0" firstAttribute="top" secondItem="M9x-IW-XBS" secondAttribute="topMargin" constant="14" id="tFO-HX-BWE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="hT4-Og-GQ0" id="8hm-r6-bD4"/>
+                                    <outlet property="artworkImageView" destination="42p-Je-dCa" id="QmU-Do-Fc4"/>
+                                    <outlet property="trackLabel" destination="p38-cn-GoU" id="ywg-7P-uZz"/>
+                                    <segue destination="40y-aA-siF" kind="show" id="FpP-vK-PvO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mtx-O7-Sqc" id="mPw-9W-Bxg"/>
+                            <outlet property="delegate" destination="Mtx-O7-Sqc" id="DQL-JZ-pHZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="gXR-ll-S0F"/>
+                    <connections>
+                        <outlet property="searchBar" destination="tsa-Pa-hQ1" id="DzG-3y-KeV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvC-pa-9qT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="603" y="429"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="AhK-Kg-Zoo">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="40y-aA-siF" customClass="DetailViewController" customModule="iTunesAPISample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avE-aK-y0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PUq-bn-Xu9">
+            <objects>
+                <navigationController id="zWL-p1-WFN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ape-6w-aEy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mtx-O7-Sqc" kind="relationship" relationship="rootViewController" id="ddy-zL-hCK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAd-Cb-ojJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="444"/>
         </scene>
     </scenes>
 </document>
